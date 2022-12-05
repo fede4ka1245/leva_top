@@ -1,5 +1,5 @@
 from peewee import *
-from database import database
+from database.database import database
 
 class IndexedTable(Model):
     index = PrimaryKeyField()

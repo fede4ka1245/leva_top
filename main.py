@@ -1,15 +1,15 @@
 from helpers.tkinter_choose_file import tkinter_choose_file
 from helpers.get_new_files import get_new_files
 from helpers.get_datatable import get_datatable
-from database import database
-from Data import Data
-from IndexedTable import IndexedTable
+from database.orm.Data import Data
+from database.orm.IndexedTable import IndexedTable
 
 name = tkinter_choose_file()
+
 files = get_new_files(name)
 files.append(name)
+
 datatable = get_datatable(files, name)
-database.create_tables([Data])
 
 Data.create_table()
 
