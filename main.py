@@ -30,7 +30,7 @@ for j in range(len(datatable)):
 
     indexedTable.create_table()
 
-    for i in range(0, len(datatable)):
+    for i in range(0, len(datatable[j])):
         indexedTable.insert(
             index=f'{i}',
             num=f'{datatable[j][i][0]}',
