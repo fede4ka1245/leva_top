@@ -1,10 +1,8 @@
-from tkinter import *
-from tkinter import filedialog
+from tkinter import filedialog, Tk, Label, Button
 
 root = Tk()
 
-def tkinter_choose():
-
+def tkinter_choose_file():
     def callback():
         global name
 
@@ -14,7 +12,6 @@ def tkinter_choose():
         else:
             name = ''
             again()
-
     def again():
         global lab
         global but
@@ -28,6 +25,7 @@ def tkinter_choose():
         global name
         name = ''
         root.quit()
+
     root.geometry('360x360')
     lab = Label(text='Choose the path of csv-file', fg='black')
     but = Button(text="Choose", width=15, height=3, bg='gray', fg='white', command=callback)
